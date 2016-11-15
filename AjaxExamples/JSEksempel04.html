@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+
+        function SendData() {
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("myDiv").innerHTML = this.responseText;
+                }
+
+            };
+
+            ajax.open("POST", "/Data/FormaterSide/", true);
+            ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            ajax.send("overskrift=Test&tekst=En simpel testside!");
+        }
+    </script>
+</head>
+<body>
+    <div id="myDiv"></div>
+    <script>
+        SendData();
+    </script>
+</body>
+</html>
+

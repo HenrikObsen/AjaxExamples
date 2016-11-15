@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+       
+            var $myDiv = $('#myDiv');
+
+            $.ajax({
+                type: 'GET',
+                url: '/Data/HentSider/',
+                success: function(data) {
+                    $.each(data, function(i, indhold) {
+                        $myDiv.append("<h1>" + indhold.Overskrift + "</h1>" + indhold.Tekst + "<hr/>");
+                    });
+                }
+                
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="myDiv"></div>
+
+</body>
+</html>

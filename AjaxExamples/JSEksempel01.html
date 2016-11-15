@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript">
+        
+        function HentTekst() {
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+             
+                    document.getElementById("myDiv").innerHTML = this.responseText;
+                
+            };
+
+            ajax.open("GET", "tekst.txt", true);
+            ajax.send();
+        }
+    </script>
+</head>
+<body>
+<div id="myDiv">Klik på knappen for at hente indholdet fra test.txt</div>
+    <button onclick="HentTekst();">Hent</button>
+</body>
+</html>

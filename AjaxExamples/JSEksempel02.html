@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+
+        function HentSide() {
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+
+                document.getElementById("myDiv").innerHTML = this.responseText;
+
+            };
+
+            ajax.open("GET", "/Data/Index/", true);
+            ajax.send();
+        }
+    </script>
+</head>
+<body>
+    <div id="myDiv"></div>
+<script>
+    HentSide();
+</script>
+</body>
+</html>

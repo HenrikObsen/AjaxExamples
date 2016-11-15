@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+      
+            function Indhold(id, overskrift, tekst) {
+
+                this.ID = id;
+                this.Overskrift = overskrift;
+                this.Tekst = tekst;
+
+            }
+        
+        function AddPage() {
+            var $myDiv = $('#myDiv');
+            var overskrift = $('#overskrift').val();
+            var tekst = $('#tekst').val();
+          
+            var newIndhold = new Indhold(0, overskrift, tekst);
+
+            $.ajax({
+                type: 'POST',
+                url: '/Data/NySide/',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ indhold: newIndhold }),
+                success: function (indhold) {
+                    indhold(indhold);
+                    $myDiv.append("<h1>" + indhold.Overskrift + "</h1>" + indhold.Tekst + "<hr/>");
+                 
+                },
+                error: function () {
+                    alert('Der opstod en fejl!!!');
+                }
+
+            });
+        }
+    </script>
+</head>
+<body>
+<form onsubmit="return AddPage();">
+    Overskrift: <input id="overskrift" type="text"/>
+    <br/>
+    <textarea id="tekst" rows="2" cols="20"></textarea>
+    <br/>
+    <input id="Gem" type="submit" value="Gem" />
+</form>
+
+<div id="myDiv"></div>
+
+</body>
+</html>
