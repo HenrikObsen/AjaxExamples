@@ -90,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="JQAjax01.JPG" />
+    <Content Include="JQAjax02.JPG" />
+    <Content Include="JQAjax03.JPG" />
     <Content Include="JQEksempel04 -test.html" />
     <Content Include="JQEksempel04.html" />
     <Content Include="JQEksempel03.html" />
