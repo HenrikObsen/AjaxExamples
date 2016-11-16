@@ -1,0 +1,13 @@
+﻿@using RepoMZ
+@model List<Indhold>
+@{
+    Layout = null;
+}
+
+<ul>
+    @foreach (Indhold indhold in Model)
+    {
+        <li data-id="@indhold.ID">@indhold.Overskrift <button onclick="Slet(this);" class="sletBtn">x</button></li>
+    }
+</ul>
+

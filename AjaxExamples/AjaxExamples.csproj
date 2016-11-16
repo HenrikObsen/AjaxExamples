@@ -93,6 +93,7 @@
     <Content Include="JQAjax01.JPG" />
     <Content Include="JQAjax02.JPG" />
     <Content Include="JQAjax03.JPG" />
+    <Content Include="JQEksempel05.html" />
     <Content Include="JQEksempel04 -test.html" />
     <Content Include="JQEksempel04.html" />
     <Content Include="JQEksempel03.html" />
@@ -102,6 +103,11 @@
     <Content Include="JSEksempel02.html" />
     <Content Include="JSEksempel03.html" />
     <Content Include="JSEksempel04.html" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="tekst.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -117,6 +123,9 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Data\Index.cshtml" />
+    <Content Include="Views\Data\Slet.cshtml" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

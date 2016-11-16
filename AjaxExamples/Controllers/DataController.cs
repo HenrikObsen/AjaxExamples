@@ -32,12 +32,21 @@ namespace AjaxExamples.Controllers
         {
             return Json(inf.GetAll(), JsonRequestBehavior.AllowGet);
         }
-        
-        
+
+
         public ActionResult NySide(Indhold indhold)
         {
             int ID = inf.Insert(indhold);
             return Json(inf.Get(ID), JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult Slet()
+        {
+            return View(inf.GetAll());
+        }
+
+        public void SletResult(int id)
+        {
+            inf.Delete(id);
         }
 
 

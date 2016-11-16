@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        
+        function Slet(obj) {
+           
+            var $li = $(obj).closest('li');
+            var id = $li.attr('data-id');
+            $.ajax({
+                type: 'GET',
+                url: '/Data/SletResult/' + id + "/",
+                success: function () {
+                    $li.fadeOut(300, function () {
+                       // alert('Er nu slettet!');
+                    });
+                }
+            });
+        };
+
+        $(function () {
+
+            var $myDiv = $('#myDiv');
+
+            $.ajax({
+                type: 'GET',
+                url: '/Data/Slet/',
+                success: function(data) {
+                    $myDiv.append(data);
+                }
+            });
+           
+        });
+
+
+    </script>
+</head>
+<body>
+<div id="myDiv"></div>
+</body>
+</html>
