@@ -11,6 +11,11 @@ namespace AjaxExamples.Controllers
     {
         // GET: Data
         IndholdFac inf = new IndholdFac();
+        public ActionResult HentInformation()
+        {
+            return View("Index", inf.Get(2));
+        }
+
         public ActionResult Index(int id)
         {
             return View(inf.Get(id));
