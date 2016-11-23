@@ -106,8 +106,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Billeder\Biler\300\Chevrolet-Aveo-01.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Chevrolet-Aveo-02.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Chevrolet-Cruze-01.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Chevrolet-Spark_01.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Chevrolet-Spark_02.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Opel_Adam_01.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Opel_Adam_02.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Opel_Adam_03.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Opel_Insignia_01.jpg" />
+    <Content Include="Content\Billeder\Biler\300\Opel_Insignia_02.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Chevrolet-Aveo-01.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Chevrolet-Aveo-02.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Chevrolet-Cruze-01.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Chevrolet-Spark_01.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Chevrolet-Spark_02.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Opel-Adam-01.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Opel_Adam_02.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Opel_Adam_03.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Opel_Insignia_01.jpg" />
+    <Content Include="Content\Billeder\Biler\800\Opel_Insignia_02.jpg" />
+    <Content Include="Content\Billeder\Producenter\chevrolet_logo.jpg" />
+    <Content Include="Content\Billeder\Producenter\opel_logo.jpg" />
     <Content Include="Global.asax" />
-    <Content Include="HtmlPage1.html" />
+    <Content Include="WebApi01.html" />
     <Content Include="JQAjax01.JPG" />
     <Content Include="JQAjax02.JPG" />
     <Content Include="JQAjax03.JPG" />
@@ -121,6 +143,12 @@
     <Content Include="JSEksempel02.html" />
     <Content Include="JSEksempel03.html" />
     <Content Include="JSEksempel04.html" />
+    <Content Include="WebApi02.html" />
+    <Content Include="Content\Billeder\Biler\300\Thumbs.db" />
+    <Content Include="Content\Billeder\Biler\800\Thumbs.db" />
+    <Content Include="Content\Billeder\Producenter\Thumbs.db" />
+    <Content Include="WebApi03.html" />
+    <Content Include="WebApi04.html" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />

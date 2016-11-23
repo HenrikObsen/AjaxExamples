@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        function Producent(id, navn, logo) {
+
+            this.ID = id;
+            this.Navn = navn;
+            this.Logo = logo;
+
+        }
+
+        function AddProducent() {
+           
+            var navn = $('#navn').val();
+            var logo = $('#logo').val();
+
+            var newProducent = new Producent(0, navn, logo);
+
+            alert(navn);
+            $.ajax({
+                type: 'POST',
+                url: 'http://api.webitgrenaa.dk/api/Producent',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(newProducent),
+                success: function() {
+                    $('#myDiv').html('DONE!!!');
+                },
+                error: function (jqXHR, exception) {
+                    var msg = 'Status: ' + jqXHR.status + "<br/>Exeption: " + exception;
+                    $('#myDiv').html(msg);
+                }
+
+
+            });
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return AddProducent(), false;">
+        Navn: <input type="text" id="navn" />
+        <br />
+        Logo: <input type="text" id="logo"/>
+        <br />
+        <input id="Gem" type="submit" value="Gem" />
+    </form>
+    <div id="myDiv"></div>
+   
+
+</body>
+</html>

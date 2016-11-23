@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        function Slet(obj) {
+
+            var $li = $(obj).closest('li');
+            var id = $li.attr('data-id');
+            
+            $.ajax({
+                type: 'DELETE',
+                url: 'http://api.webitgrenaa.dk/api/Producent/' + id,
+                success: function () {
+                    $li.fadeOut(300, function () {
+                        // alert('Er nu slettet!');
+                    });
+                },
+                error: function (jqXHR, exception) {
+                    var msg = '<li>Status: ' + jqXHR.status + "</li><li>Exeption: " + exception + "</li>";
+                    $('#myDiv').html(msg);
+                }
+            });
+        };
+
+        $(function () {
+
+            var $myDiv = $('#myDiv');
+
+            $.ajax({
+                type: 'GET',
+                url: 'http://api.webitgrenaa.dk/api/Producent',
+                success: function (data) {
+                    $.each(data, function (i, producent) {
+                        $myDiv.append("<li data-id=\"" + producent.ID + "\">" + producent.Navn + " <a href=\"#\" onclick=\"Slet(this);\">Slet</a></li>");
+                    });
+                }
+            });
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <span id="myDiv"></span>
+    </ul>
+</body>
+</html>
