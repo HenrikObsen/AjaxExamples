@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,6 +58,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -129,6 +132,9 @@
     <Content Include="Content\Billeder\Producenter\chevrolet_logo.jpg" />
     <Content Include="Content\Billeder\Producenter\opel_logo.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="MapEks01.html" />
+    <Content Include="Service1.svc" />
+    <Content Include="WebApi01 - Copy.html" />
     <Content Include="WebApi01.html" />
     <Content Include="JQAjax01.JPG" />
     <Content Include="JQAjax02.JPG" />
@@ -164,7 +170,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1.svc.cs">
+      <DependentUpon>Service1.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -184,12 +194,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Vrag\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepoMZ\RepoMZ.csproj">
       <Project>{cd0dc7d9-d206-42b7-ac7e-51c01b58f25b}</Project>
       <Name>RepoMZ</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RepoSpots\RepoSpots.csproj">
+      <Project>{5deba9ac-a607-4d6c-b416-6c9968f3bdd5}</Project>
+      <Name>RepoSpots</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

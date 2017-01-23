@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3-askrTqq2WxPI_l1jTn9udhrnro0c4" type="text/javascript"></script>-->
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=AIzaSyAa3-askrTqq2WxPI_l1jTn9udhrnro0c4" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+
+        function AddAlert(url, message) {
+
+            alert(message);
+            window.open(url, '_self');
+
+            return true;
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+
+
+
+    <h1>Vragkort</h1>
+
+    <div id="map" style="width: 600px; height: 620px; margin-top: auto auto auto auto;">
+    </div>
+    <script type="text/javascript">
+//<![CDATA[
+var baseIcon = new GIcon(G_DEFAULT_ICON);
+var baseIcon = new GIcon();
+baseIcon.image = "Vrag/VragIco.png";
+baseIcon.iconSize = new GSize(34, 25);
+baseIcon.shadowSize = new GSize(34, 25);
+baseIcon.iconAnchor = new GPoint(34, 25);
+ baseIcon.infoWindowAnchor = new GPoint(10, 21);
+ baseIcon.infoShadowAnchor = new GPoint(10, 21);
+
+function createMarker(point, html) {
+ var marker = new GMarker(point, {icon:baseIcon, title:"My House"});
+
+GEvent.addListener(marker, 'click', function() {
+marker.openInfoWindowHtml(html, {maxWidth : 240});
+});
+return marker;
+}
+
+function addMarker(gpsLong, gpsLat, html){
+ point = new GLatLng( gpsLat, gpsLong  );
+ marker = createMarker(point, html);
+ map.addOverlay(marker);
+}var map;
+
+ function onLoad() {
+  map = new GMap2(document.getElementById("map"));
+ map.setCenter(new GLatLng(56.30123, 10.58633), 8);
+   map.addControl(new GLargeMapControl());
+  map.addControl(new GMapTypeControl());
+  map.enableDoubleClickZoom();
+ map.enableScrollWheelZoom();
+var point, marker, html;
+
+
+html = "<font color=#000000><b>Prammen</b></font><br><br><table width=270><tr><td width=120><img src='Vrag/Billeder/NoImage.png' width='120' height='80' class='img3' /><td><td><b>GPS:</b><br>Lat: 11.06371<br>Long: 56.19413<br/>Dybte: 14 m.<br/><br/><a href='#' onClick=MyWind1=window.open('VisVrag.aspx?id=1&zoom=15','MyWind1','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,width=650,height=497'); return false;>Vis vragbeskrivelse</a><br/></td></tr></table>";
+ //addMarker(10.58633, 56.30123, html );
+addMarker(10.97722, 56.50205, html );
+
+}
+
+window.onload=onLoad;
+ window.onunload=GUnload;
+ //]]>
+    </script>
+
+
+</body>
+</html>
