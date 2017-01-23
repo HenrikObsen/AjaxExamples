@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ff8056f-1a9d-4141-ba20-af90458c596a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://api.webitgrenaa.dk/AKservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKservice.disco" MetadataType="Disco" ID="36286464-fa97-433b-9c37-e183d4b4208b" SourceId="1" SourceUrl="http://api.webitgrenaa.dk/AKservice.svc?disco" />
+    <MetadataFile FileName="AKservice.xsd" MetadataType="Schema" ID="ca969df5-0926-49e5-a31b-01df89e7baf8" SourceId="1" SourceUrl="http://api.webitgrenaa.dk/AKservice.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKservice1.xsd" MetadataType="Schema" ID="ed93f88d-25f5-41b2-9b1c-6d933006ae98" SourceId="1" SourceUrl="http://api.webitgrenaa.dk/AKservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKservice.wsdl" MetadataType="Wsdl" ID="166a7f54-5f1b-43b6-90e4-1df3401294ff" SourceId="1" SourceUrl="http://api.webitgrenaa.dk/AKservice.svc?wsdl" />
+    <MetadataFile FileName="AKservice2.xsd" MetadataType="Schema" ID="78b10135-1e53-4aa0-b55f-22c5981fdd0e" SourceId="1" SourceUrl="http://api.webitgrenaa.dk/AKservice.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
